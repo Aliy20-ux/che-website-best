@@ -46,7 +46,7 @@ var P = {
   /* ── STOCK PHOTOS — unique image per item ── */
   // Wraps — reuse local photos for similar items, skip ones I can't verify
   fetawrap:    'images/falafel_wrap.jpg',      // Same wrap style, acceptable
-  chipswrap:   'images/loaded_chips.jpg',      // Shows the chips element
+  chipswrap:   'images/chips_salad_wrap.jpg',    // Chips, Cheese & Salad Wrap ✓
   lamb:        'photo-1555939594-58d7cb561ad1', // Lamb shawarma — verified
 
   // Pizzas — only use images I'm confident are correct
@@ -54,7 +54,7 @@ var P = {
   custom:      'images/campagnol_pizza.jpg',    // Pizza base reference
   mushroom:    'photo-1565299624946-b28f40a0ae38', // Mushroom pizza — verified
   pepperoni:   'photo-1628840042765-356cda07504e', // Pepperoni — verified
-  vegpizza:    null, // No verified image — show dark fallback
+  vegpizza:    'images/veg_pizza.jpg',         // Vegetarian pizza ✓
   hotspicy:    null, // No verified image — show dark fallback
 
   // Burgers

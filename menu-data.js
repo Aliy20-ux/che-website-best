@@ -44,36 +44,36 @@ var P = {
   tahini:       'images/tahina.jpg',           // Tahina Yoghurt
 
   /* ── STOCK PHOTOS — unique image per item ── */
-  // Wraps
-  fetawrap:    'photo-1626700051175-6818013e1d4f', // Feta/cheese wrap
-  chipswrap:   'photo-1630383249896-424e482df921', // Chips wrap
-  lamb:        'photo-1555939594-58d7cb561ad1',    // Lamb Shawarma
+  // Wraps — reuse local photos for similar items, skip ones I can't verify
+  fetawrap:    'images/falafel_wrap.jpg',      // Same wrap style, acceptable
+  chipswrap:   'images/loaded_chips.jpg',      // Shows the chips element
+  lamb:        'photo-1555939594-58d7cb561ad1', // Lamb shawarma — verified
 
-  // Pizzas
-  margarita:   'photo-1574071318508-1cdbab80d002', // Margarita (plain cheese)
-  custom:      'photo-1513104890138-7c749659a591', // Make Your Own
-  mushroom:    'photo-1565299624946-b28f40a0ae38', // Fonghi (mushroom)
-  pepperoni:   'photo-1628840042765-356cda07504e', // Pepperoni
-  vegpizza:    'photo-1565557623262-b51c2513a641', // Vegetarian pizza (colourful veg toppings)
-  hotspicy:    'photo-1593560708920-61dd98c46a4e', // Hot & Spicy (spicy peppers pizza)
+  // Pizzas — only use images I'm confident are correct
+  margarita:   'photo-1574071318508-1cdbab80d002', // Plain cheese pizza — verified
+  custom:      'images/campagnol_pizza.jpg',    // Pizza base reference
+  mushroom:    'photo-1565299624946-b28f40a0ae38', // Mushroom pizza — verified
+  pepperoni:   'photo-1628840042765-356cda07504e', // Pepperoni — verified
+  vegpizza:    null, // No verified image — show dark fallback
+  hotspicy:    null, // No verified image — show dark fallback
 
   // Burgers
-  burger:      'photo-1568901346375-23c9450c58cd', // Beef Burger
-  beefcheese:  'photo-1553979459-d2229ba7433b',    // Beef Cheese Burger
-  chickburg:   'photo-1606755962773-d324e0a13086', // Chicken Burger
-  burgchips:   'photo-1572802419224-296b0aeee0d9', // Burger & Chips
+  burger:      'photo-1568901346375-23c9450c58cd', // plain beef burger ✓
+  beefcheese:  null, // skip — too many wrong results
+  chickburg:   null, // skip
+  burgchips:   null, // skip
 
   // Chips
-  chips:       'photo-1576107232684-1279f390859f', // Plain chips
-  cheesychips: 'photo-1541592106381-b31e9677c0e5', // Cheesy chips
+  chips:       'photo-1576107232684-1279f390859f', // chips ✓
+  cheesychips: null, // skip — hard to verify
 
-  // Salads
-  falafelsalad:'photo-1512621776951-a57141f2eefd', // Falafel salad (colourful bowl)
-  salad:       'photo-1540189549336-e6e99c3679fe', // House salad (fresh greens)
+  // Salads — local shawarma_salad already used for shawarma salad
+  falafelsalad:'images/shawarma_salad.jpg',  // closest local match
+  salad:       null, // skip — generic salad would look wrong
 
   // Drinks
-  drinks:      'photo-1581006852262-e4307cf6283a', // Soft drinks
-  water:       'photo-1548839140-29a749e1cf4d',    // Water
+  drinks:      'photo-1581006852262-e4307cf6283a', // cans ✓
+  water:       'photo-1548839140-29a749e1cf4d'     // water ✓
 };
 
 window.PHOTO_URL = u;

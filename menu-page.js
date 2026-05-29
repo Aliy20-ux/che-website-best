@@ -66,16 +66,20 @@
         }).join('');
 
         const isLocal = item.photo && item.photo.startsWith('images/');
-        const imgSrc = isLocal
-          ? item.photo
-          : `https://images.unsplash.com/${item.photo}?auto=format&fit=crop&w=600&h=400&q=82&fm=jpg`;
-        const lbSrc  = isLocal
-          ? item.photo
-          : `https://images.unsplash.com/${item.photo}?auto=format&fit=crop&w=1200&q=90&fm=jpg`;
+        const imgSrc = !item.photo
+          ? null
+          : isLocal
+            ? item.photo
+            : `https://images.unsplash.com/${item.photo}?auto=format&fit=crop&w=600&h=400&q=82&fm=jpg`;
+        const lbSrc  = !item.photo
+          ? null
+          : isLocal
+            ? item.photo
+            : `https://images.unsplash.com/${item.photo}?auto=format&fit=crop&w=1200&q=90&fm=jpg`;
 
         card.innerHTML = `
           <div class="menu-card-img" onclick="openMenuLightbox('${lbSrc}','${item.name}','${item.price}')">
-            <img src="${imgSrc}" alt="${item.name}" loading="lazy" decoding="async" onerror="imgFallback(this)">
+            ${imgSrc ? `<img src="${imgSrc}" alt="${item.name}" loading="lazy" decoding="async" onerror="imgFallback(this)">` : ''}
             <div class="menu-card-img-overlay"></div>
             ${tagHTML ? `<div class="menu-card-tags">${tagHTML}</div>` : ''}
           </div>

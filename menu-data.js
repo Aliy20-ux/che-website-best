@@ -55,21 +55,21 @@ var P = {
   mushroom:    'photo-1565299624946-b28f40a0ae38', // Mushroom pizza — verified
   pepperoni:   'photo-1628840042765-356cda07504e', // Pepperoni — verified
   vegpizza:    'images/veg_pizza.jpg',         // Vegetarian pizza ✓
-  hotspicy:    null, // No verified image — show dark fallback
+  hotspicy:    'images/house_special.jpg',
 
   // Burgers
   burger:      'photo-1568901346375-23c9450c58cd', // plain beef burger ✓
-  beefcheese:  null, // skip — too many wrong results
-  chickburg:   null, // skip
-  burgchips:   null, // skip
+  beefcheese:  'photo-1553979459-d2229ba7433b',
+  chickburg:   'photo-1606755962773-d324e0a13086',
+  burgchips:   'photo-1572802419224-296b0aeee0d9',
 
   // Chips
   chips:       'photo-1576107232684-1279f390859f', // chips ✓
-  cheesychips: null, // skip — hard to verify
+  cheesychips: 'photo-1541592106381-b31e9677c0e5', // Cheesy chips ✓
 
   // Salads — local shawarma_salad already used for shawarma salad
   falafelsalad:'images/shawarma_salad.jpg',  // closest local match
-  salad:       null, // skip — generic salad would look wrong
+  salad:       'images/shawarma_salad.jpg',
 
   // Drinks
   drinks:      'photo-1581006852262-e4307cf6283a', // cans ✓

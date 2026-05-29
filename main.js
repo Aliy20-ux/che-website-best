@@ -182,10 +182,11 @@
   /* ── Word split for section titles ── */
   function splitSectionTitles() {
     $$('.section-title').forEach(el => {
-      // Don't re-process
       if (el.querySelector('.split-word')) return;
-      el.innerHTML = el.innerHTML.replace(/(<em>.*?<\/em>|[^\s<]+)/g, (match) => {
-        return `<span class="split-word"><span class="word-inner">${match}</span></span>`;
+      // Skip HTML tags intact, wrap only actual text words
+      el.innerHTML = el.innerHTML.replace(/(<[^>]+>)|([^\s<>]+)/g, (match, tag, word) => {
+        if (tag) return tag; // leave <br>, <em>, </em> etc. untouched
+        return `<span class="split-word"><span class="word-inner">${word}</span></span>`;
       });
     });
   }

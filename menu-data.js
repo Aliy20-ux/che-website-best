@@ -28,40 +28,51 @@ function u(id, w, h) {
 }
 
 var P = {
-  /* LOCAL PHOTOS — correctly matched to each item */
-  shawarma:    'images/shawarma.jpg',        // Chicken Shawarma Wrap
-  mix:         'images/mix_shawarma.jpg',    // Mix Shawarma Wrap
-  falafel:     'images/falafel_wrap.jpg',    // Falafel Wrap
-  vegfalafel:  'images/vegan_falafel.jpg',   // Vegan Falafel Wrap
-  fetawrap:    'images/falafel_wrap.jpg',    // Feta Wrap (same style wrap)
-  chipswrap:   'images/loaded_chips.jpg',    // Chips Wrap — shows chips, not a falafel
-  campagnol:   'images/campagnol_pizza.jpg', // Campagnol Pizza (mushroom & chicken)
-  hawaii:      'images/hawaii_pizza.jpg',    // Hawaii Pizza
-  vegpizza:    'images/house_special.jpg',   // Vegetarian Pizza
-  hotspicy:    'images/house_special.jpg',   // Hot & Spicy Pizza
-  housepizza:  'images/house_special.jpg',   // House Special Pizza
-  custom:      'images/campagnol_pizza.jpg', // Make Your Own (pizza base reference)
-  chipsmeat:   'images/loaded_chips.jpg',    // Chips, Cheese & Meat / Chicken
-  shawarmasalad:'images/shawarma_salad.jpg', // Shawarma Salad
-  falafelsalad:'images/shawarma_salad.jpg',  // Falafel Salad
-  salad:       'images/shawarma_salad.jpg',  // House Salad
-  hummus:      'images/hummus.jpg',          // Hummus
-  garlic:      'images/garlic_mayo.jpg',     // Garlic Mayonnaise
-  chilli:      'images/chilli_sauce.jpg',    // Chilli Sauce
-  tahini:      'images/tahina.jpg',          // Tahina Yoghurt
+  /* ── LOCAL PHOTOS (uploaded by owner) ── */
+  shawarma:     'images/shawarma.jpg',         // Chicken Shawarma Wrap
+  mix:          'images/mix_shawarma.jpg',     // Mix Shawarma Wrap
+  falafel:      'images/falafel_wrap.jpg',     // Falafel Wrap
+  vegfalafel:   'images/vegan_falafel.jpg',    // Vegan Falafel Wrap
+  campagnol:    'images/campagnol_pizza.jpg',  // Campagnol Pizza
+  hawaii:       'images/hawaii_pizza.jpg',     // Hawaii Pizza
+  housepizza:   'images/house_special.jpg',    // House Special Pizza
+  chipsmeat:    'images/loaded_chips.jpg',     // Chips, Cheese & Meat / Chicken
+  shawarmasalad:'images/shawarma_salad.jpg',   // Shawarma Salad
+  hummus:       'images/hummus.jpg',           // Hummus
+  garlic:       'images/garlic_mayo.jpg',      // Garlic Mayonnaise
+  chilli:       'images/chilli_sauce.jpg',     // Chilli Sauce
+  tahini:       'images/tahina.jpg',           // Tahina Yoghurt
 
-  /* Stock photos for items without uploaded photos */
+  /* ── STOCK PHOTOS — unique image per item ── */
+  // Wraps
+  fetawrap:    'photo-1626700051175-6818013e1d4f', // Feta/cheese wrap
+  chipswrap:   'photo-1630383249896-424e482df921', // Chips wrap
   lamb:        'photo-1555939594-58d7cb561ad1',    // Lamb Shawarma
+
+  // Pizzas
+  margarita:   'photo-1574071318508-1cdbab80d002', // Margarita (plain cheese)
+  custom:      'photo-1513104890138-7c749659a591', // Make Your Own
+  mushroom:    'photo-1565299624946-b28f40a0ae38', // Fonghi (mushroom)
+  pepperoni:   'photo-1628840042765-356cda07504e', // Pepperoni
+  vegpizza:    'photo-1565557623262-b51c2513a641', // Vegetarian pizza (colourful veg toppings)
+  hotspicy:    'photo-1593560708920-61dd98c46a4e', // Hot & Spicy (spicy peppers pizza)
+
+  // Burgers
   burger:      'photo-1568901346375-23c9450c58cd', // Beef Burger
   beefcheese:  'photo-1553979459-d2229ba7433b',    // Beef Cheese Burger
   chickburg:   'photo-1606755962773-d324e0a13086', // Chicken Burger
   burgchips:   'photo-1572802419224-296b0aeee0d9', // Burger & Chips
-  margarita:   'photo-1574071318508-1cdbab80d002', // Margarita Pizza (plain cheese)
-  chips:       'photo-1576107232684-1279f390859f', // Chips
-  cheesychips: 'photo-1541592106381-b31e9677c0e5', // Cheesy Chips
-  mushroom:    'photo-1565299624946-b28f40a0ae38', // Fonghi Pizza
-  pepperoni:   'photo-1628840042765-356cda07504e', // Pepperoni Pizza
-  drinks:      'photo-1581006852262-e4307cf6283a', // Drinks
+
+  // Chips
+  chips:       'photo-1576107232684-1279f390859f', // Plain chips
+  cheesychips: 'photo-1541592106381-b31e9677c0e5', // Cheesy chips
+
+  // Salads
+  falafelsalad:'photo-1512621776951-a57141f2eefd', // Falafel salad (colourful bowl)
+  salad:       'photo-1540189549336-e6e99c3679fe', // House salad (fresh greens)
+
+  // Drinks
+  drinks:      'photo-1581006852262-e4307cf6283a', // Soft drinks
   water:       'photo-1548839140-29a749e1cf4d',    // Water
 };
 

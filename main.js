@@ -25,19 +25,23 @@
   /* ── Hamburger ── */
   const ham = $('#ham');
   const mob = $('#mobMenu');
+  const mobOverlay = $('#mobOverlay');
   let mOpen = false;
   function closeMenu() {
     mOpen = false;
     ham.classList.remove('open');
     mob.classList.remove('open');
+    mobOverlay.classList.remove('open');
     document.body.style.overflow = '';
   }
   ham.addEventListener('click', () => {
     mOpen = !mOpen;
     ham.classList.toggle('open', mOpen);
     mob.classList.toggle('open', mOpen);
+    mobOverlay.classList.toggle('open', mOpen);
     document.body.style.overflow = mOpen ? 'hidden' : '';
   });
+  mobOverlay.addEventListener('click', closeMenu);
   $('#mobClose').addEventListener('click', closeMenu);
   $$('.mob-link, .mob-btn', mob).forEach(el => el.addEventListener('click', closeMenu));
   document.addEventListener('keydown', e => {

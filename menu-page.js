@@ -65,8 +65,13 @@
           return m ? `<span class="tag ${m[0]}">${m[1]}</span>` : '';
         }).join('');
 
-        const imgSrc = `https://images.unsplash.com/${item.photo}?auto=format&fit=crop&w=600&h=400&q=82&fm=jpg`;
-        const lbSrc  = `https://images.unsplash.com/${item.photo}?auto=format&fit=crop&w=1200&q=90&fm=jpg`;
+        const isLocal = item.photo && item.photo.startsWith('images/');
+        const imgSrc = isLocal
+          ? item.photo
+          : `https://images.unsplash.com/${item.photo}?auto=format&fit=crop&w=600&h=400&q=82&fm=jpg`;
+        const lbSrc  = isLocal
+          ? item.photo
+          : `https://images.unsplash.com/${item.photo}?auto=format&fit=crop&w=1200&q=90&fm=jpg`;
 
         card.innerHTML = `
           <div class="menu-card-img" onclick="openMenuLightbox('${lbSrc}','${item.name}','${item.price}')">

@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="CHE Takeaway Edinburgh — 100% Halal shawarmas, stone-baked pizzas & Middle Eastern street food at 21 Forrest Road, Old Town, Edinburgh EH1 2QH.">
+<title>CHE — Halal Edinburgh · 21 Forrest Road</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <a class="nav-logo" href="index.html">
+    <svg class="flag-sm" viewBox="0 0 28 19" xmlns="http://www.w3.org/2000/svg"><rect width="28" height="19" fill="#fff"/><rect width="28" height="6.33" fill="#000"/><rect y="12.67" width="28" height="6.33" fill="#009639"/><polygon points="0,0 11,9.5 0,19" fill="#C8102E"/></svg>
+    <span class="logo-text">CHE</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#about">Story</a></li>
+    <li><a href="menu.html">Menu</a></li>
+    <li><a href="#food">Food</a></li>
+    <li><a href="#reviews">Reviews</a></li>
+    <li><a href="#visit">Visit</a></li>
+  </ul>
+  <div class="nav-actions">
+    <a href="https://www.ubereats.com/gb/store/che-takeaway/v60_GKCqQgy2SAcvM6nmnQ?diningMode=DELIVERY&sc=SEARCH_SUGGESTION" target="_blank" class="btn-order">Order Now</a>
+  </div>
+  <button class="ham" id="ham" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- MOBILE DRAWER -->
+<div class="mob-menu" id="mobMenu">
+  <button class="mob-close" id="mobClose">✕</button>
+  <nav class="mob-nav">
+    <a href="#about" class="mob-link">Our Story</a>
+    <a href="menu.html" class="mob-link">Full Menu</a>
+    <a href="#food" class="mob-link">Food</a>
+    <a href="#reviews" class="mob-link">Reviews</a>
+    <a href="#visit" class="mob-link">Visit Us</a>
+  </nav>
+  <div class="mob-order">
+    <a href="https://www.ubereats.com/gb/store/che-takeaway/v60_GKCqQgy2SAcvM6nmnQ?diningMode=DELIVERY&sc=SEARCH_SUGGESTION" target="_blank" class="mob-btn ue">Uber Eats</a>
+    <a href="https://deliveroo.co.uk/menu/edinburgh/old-town-and-canongate/che-old-town?utm_medium=affiliate&utm_source=google_maps_link&fulfillment_type=DELIVERY" target="_blank" class="mob-btn dr">Deliveroo</a>
+  </div>
+  <div class="mob-flags">
+    <svg viewBox="0 0 36 24" class="flag-md" xmlns="http://www.w3.org/2000/svg"><rect width="36" height="24" fill="#fff"/><rect width="36" height="8" fill="#000"/><rect y="16" width="36" height="8" fill="#009639"/><polygon points="0,0 14,12 0,24" fill="#C8102E"/></svg>
+    <svg viewBox="0 0 36 24" class="flag-md" xmlns="http://www.w3.org/2000/svg"><rect width="36" height="24" fill="#fff"/><rect width="36" height="8" fill="#000"/><rect y="16" width="36" height="8" fill="#009639"/><polygon points="0,0 14,12 0,24" fill="#C8102E"/></svg>
+    <svg viewBox="0 0 36 24" class="flag-md" xmlns="http://www.w3.org/2000/svg"><rect width="36" height="24" fill="#fff"/><rect width="36" height="8" fill="#000"/><rect y="16" width="36" height="8" fill="#009639"/><polygon points="0,0 14,12 0,24" fill="#C8102E"/></svg>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero-img">
+    <img
+      src="https://images.unsplash.com/photo-1603360946369-dc9bb6258143?auto=format&fit=crop&w=2400&q=95&fm=jpg"
+      alt="Authentic chicken shawarma at CHE Edinburgh"
+      fetchpriority="high"
+      decoding="async"
+      id="heroImg"
+    >
+    <div class="hero-img-overlay"></div>
+  </div>
+  <div class="hero-content">
+    <div class="hero-glow"></div>
+    <p class="hero-eye hero-anim" style="--d:0ms">
+      <span class="eye-line"></span>
+      100% Halal · Edinburgh Old Town · 21 Forrest Road
+    </p>
+    <div class="hero-title-wrap hero-anim" style="--d:200ms">
+      <svg class="hero-flag" viewBox="0 0 52 34" xmlns="http://www.w3.org/2000/svg"><rect width="52" height="34" fill="#fff"/><rect width="52" height="11.33" fill="#000"/><rect y="22.67" width="52" height="11.33" fill="#009639"/><polygon points="0,0 21,17 0,34" fill="#C8102E"/></svg>
+      <h1 class="hero-title">CHE<em>Edinburgh</em></h1>
+    </div>
+    <p class="hero-sub hero-anim" style="--d:400ms">
+      Slow-roasted shawarmas, stone-baked pizzas &amp; authentic<br>Middle Eastern street food in Edinburgh's Old Town.
+    </p>
+    <div class="hero-btns hero-anim" style="--d:580ms">
+      <a href="https://www.ubereats.com/gb/store/che-takeaway/v60_GKCqQgy2SAcvM6nmnQ?diningMode=DELIVERY&sc=SEARCH_SUGGESTION" target="_blank" class="btn-primary">🛵 Order on Uber Eats</a>
+      <a href="menu.html" class="btn-ghost">View Full Menu</a>
+    </div>
+    <div class="hero-scroll hero-anim" style="--d:1000ms">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </div>
+  <div class="flag-band"><div class="fb-blk"></div><div class="fb-wht"></div><div class="fb-grn"></div></div>
+</section>
+
+<div class="flag-divider"><div></div><div></div><div></div></div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="about-wrap">
+    <div class="about-text" data-anim="fade-left">
+      <p class="section-label">Our Story</p>
+      <h2 class="section-title">Middle Eastern Soul<br>in Edinburgh's<br><em>Old Town</em></h2>
+      <p>Nestled at 21 Forrest Road, CHE is a passion project born from love of food, culture and community. The owner — widely said to bear a striking resemblance to Che Guevara himself — brings the same revolutionary spirit to every plate.</p>
+      <p>We proudly fly the Palestinian flag and serve 100% Halal food: slow-roasted shawarmas, hand-pressed falafel, stone-baked pizzas and generous sides made fresh every single day.</p>
+      <div class="badges" data-anim="fade-up" data-delay="200">
+        <span class="badge green">100% Halal</span>
+        <span class="badge">Dine In</span>
+        <span class="badge">Takeaway</span>
+        <span class="badge">Delivery</span>
+        <span class="badge">Late Night</span>
+        <span class="badge">Uber Eats</span>
+        <span class="badge">Deliveroo</span>
+      </div>
+    </div>
+    <div class="about-card" data-anim="fade-right">
+      <div class="card-flag-bar"></div>
+      <p class="section-label">By the Numbers</p>
+      <div class="stats-grid">
+        <div class="stat" data-anim="fade-up" data-delay="0"><div class="stat-num">4.4<sup>★</sup></div><div class="stat-lbl">Avg Rating</div></div>
+        <div class="stat" data-anim="fade-up" data-delay="100"><div class="stat-num">410<sup>+</sup></div><div class="stat-lbl">Reviews</div></div>
+        <div class="stat" data-anim="fade-up" data-delay="200"><div class="stat-num">3<sup>am</sup></div><div class="stat-lbl">Fri &amp; Sat Close</div></div>
+        <div class="stat" data-anim="fade-up" data-delay="300"><div class="stat-num">£5<sup>+</sup></div><div class="stat-lbl">Min Order</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="flag-divider"><div></div><div></div><div></div></div>
+
+<!-- FOOD SHOWCASE -->
+<section id="food" class="showcase-section">
+  <div class="section-inner">
+    <div class="sec-hd" data-anim="fade-up">
+      <p class="sec-eye">Fresh Every Day</p>
+      <h2 class="section-title">Made with <em>Fire &amp; Soul</em></h2>
+      <p class="sec-sub">Click any dish to view full size</p>
+    </div>
+    <div class="showcase-grid">
+      <div class="food-card tall" data-anim="zoom-in" data-delay="0" onclick="openGallery(0)">
+        <img src="images/shawarma.jpg" alt="Chicken Shawarma Wrap" loading="lazy" onerror="imgFallback(this)">
+        <div class="fc-badge halal">Halal</div>
+        <div class="fc-info"><div class="fc-name">Chicken Shawarma Wrap</div><div class="fc-price">£13.00</div></div>
+        <div class="fc-zoom">⊕</div>
+      </div>
+      <div class="food-card" data-anim="zoom-in" data-delay="80" onclick="openGallery(1)">
+        <img src="images/campagnol_pizza.jpg" alt="Stone-Baked Pizza" loading="lazy" onerror="imgFallback(this)">
+        <div class="fc-info"><div class="fc-name">Stone-Baked Pizza</div><div class="fc-price">from £11.50</div></div>
+        <div class="fc-zoom">⊕</div>
+      </div>
+      <div class="food-card" data-anim="zoom-in" data-delay="160" onclick="openGallery(2)">
+        <img src="images/falafel_wrap.jpg" alt="Falafel Wrap" loading="lazy" onerror="imgFallback(this)">
+        <div class="fc-badge vegan">Vegan</div>
+        <div class="fc-info"><div class="fc-name">Falafel Wrap</div><div class="fc-price">£11.50</div></div>
+        <div class="fc-zoom">⊕</div>
+      </div>
+      <div class="food-card" data-anim="zoom-in" data-delay="240" onclick="openGallery(3)">
+        <img src="images/loaded_chips.jpg" alt="Loaded Chips with Meat" loading="lazy" onerror="imgFallback(this)">
+        <div class="fc-badge halal">Halal</div>
+        <div class="fc-info"><div class="fc-name">Chips, Cheese &amp; Meat</div><div class="fc-price">~£6.00</div></div>
+        <div class="fc-zoom">⊕</div>
+      </div>
+      <div class="food-card" data-anim="zoom-in" data-delay="320" onclick="openGallery(4)">
+        <img src="images/mix_shawarma.jpg" alt="Mix Shawarma Wrap" loading="lazy" onerror="imgFallback(this)">
+        <div class="fc-badge best">Most Ordered</div>
+        <div class="fc-info"><div class="fc-name">Mix Shawarma Wrap</div><div class="fc-price">£14.00</div></div>
+        <div class="fc-zoom">⊕</div>
+      </div>
+    </div>
+    <div class="showcase-cta" data-anim="fade-up" data-delay="200">
+      <a href="menu.html" class="btn-primary">View Full Menu &amp; Prices →</a>
+    </div>
+  </div>
+</section>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+  <div class="lb-backdrop" onclick="closeLightbox()"></div>
+  <button class="lb-close" onclick="closeLightbox()">✕</button>
+  <button class="lb-prev" onclick="shiftGallery(-1)">&#8592;</button>
+  <button class="lb-next" onclick="shiftGallery(1)">&#8594;</button>
+  <div class="lb-inner">
+    <img id="lb-img" src="" alt="">
+    <div class="lb-caption">
+      <div id="lb-name"></div>
+      <div id="lb-price"></div>
+    </div>
+  </div>
+</div>
+
+<div class="flag-divider"><div></div><div></div><div></div></div>
+
+<!-- ORDER NOW — proper brand logos -->
+<section class="order-section" id="order">
+  <div class="section-inner order-inner">
+    <div data-anim="fade-up">
+      <h2 class="section-title">Order Online — <em>Get It Delivered</em></h2>
+      <p class="order-sub">Choose your platform and get CHE delivered to your door. Min order £5.</p>
+    </div>
+    <div class="app-grid">
+
+      <a href="https://www.ubereats.com/gb/store/che-takeaway/v60_GKCqQgy2SAcvM6nmnQ?diningMode=DELIVERY&sc=SEARCH_SUGGESTION" target="_blank" class="app-card" data-anim="fade-up" data-delay="0">
+        <div class="app-logo-wrap" style="background:#06C167;">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 70" width="180" height="54">
+            <text x="8" y="52" font-family="'Arial Black',Arial,sans-serif" font-weight="900" font-size="48" fill="white">Uber Eats</text>
+          </svg>
+        </div>
+        <div class="app-name">Uber Eats</div>
+        <div class="app-sub">Order now →</div>
+      </a>
+
+      <a href="https://deliveroo.co.uk/menu/edinburgh/old-town-and-canongate/che-old-town?utm_medium=affiliate&utm_source=google_maps_link&fulfillment_type=DELIVERY" target="_blank" class="app-card" data-anim="fade-up" data-delay="100">
+        <div class="app-logo-wrap" style="background:#00CCBC;">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 70" width="200" height="54">
+            <text x="8" y="52" font-family="'Arial Black',Arial,sans-serif" font-weight="900" font-size="42" fill="white">Deliveroo</text>
+          </svg>
+        </div>
+        <div class="app-name">Deliveroo</div>
+        <div class="app-sub">Order now →</div>
+      </a>
+
+      <a href="#visit" class="app-card" data-anim="fade-up" data-delay="200">
+        <div class="app-logo-wrap walkin-logo">
+          <span class="walkin-icon">🚶</span>
+          <span class="walkin-text">Walk In</span>
+        </div>
+        <div class="app-name">Walk In</div>
+        <div class="app-sub">21 Forrest Road</div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<div class="flag-divider"><div></div><div></div><div></div></div>
+
+<!-- REVIEWS -->
+<section id="reviews" class="reviews-section">
+  <div class="big-quote">"</div>
+  <div class="section-inner">
+    <div class="sec-hd" data-anim="fade-up">
+      <p class="sec-eye">What People Say</p>
+      <h2 class="section-title">Loved by <em>Edinburgh</em></h2>
+    </div>
+    <div class="reviews-grid">
+      <div class="review-card" data-anim="fade-up" data-delay="0"><div class="stars">★★★★★</div><p class="review-text">"After exploring numerous halal restaurants in Edinburgh, CHE turned out to be the best. The falafel is truly authentic — we returned the very next day!"</p><div class="reviewer"><div class="r-avatar">MA</div><div><div class="r-name">Mahmoud A.</div><div class="r-src">Google Reviews</div></div></div></div>
+      <div class="review-card" data-anim="fade-up" data-delay="100"><div class="stars">★★★★★</div><p class="review-text">"Ordered the mixed shawarma to go and it was so tasty I could have gone back and ordered another. Brilliant portions. Staff are fantastic."</p><div class="reviewer"><div class="r-avatar">JT</div><div><div class="r-name">James T.</div><div class="r-src">TripAdvisor</div></div></div></div>
+      <div class="review-card" data-anim="fade-up" data-delay="200"><div class="stars">★★★★★</div><p class="review-text">"One of the best pizzas in Edinburgh — with halal options! The owner gave us extra chips for free. We'll be back every time we visit."</p><div class="reviewer"><div class="r-avatar">SR</div><div><div class="r-name">Sofia R.</div><div class="r-src">TripAdvisor</div></div></div></div>
+      <div class="review-card" data-anim="fade-up" data-delay="0"><div class="stars">★★★★★</div><p class="review-text">"Loving the Che Guevara decorations. 10/10 food — never had a bad experience. Always a good scran at a great price."</p><div class="reviewer"><div class="r-avatar">LB</div><div><div class="r-name">Liam B.</div><div class="r-src">InTravel Reviews</div></div></div></div>
+      <div class="review-card" data-anim="fade-up" data-delay="100"><div class="stars">★★★★★</div><p class="review-text">"Without a doubt, CHE has THE BEST chips in Edinburgh — maybe in the world. Anyone visiting the city should stop by for a snack."</p><div class="reviewer"><div class="r-avatar">FW</div><div><div class="r-name">Fiona W.</div><div class="r-src">TripAdvisor</div></div></div></div>
+      <div class="review-card" data-anim="fade-up" data-delay="200"><div class="stars">★★★★★</div><p class="review-text">"The chicken shawarma wrap had a perfect balance of meat and toppings. Larger portions than anywhere else I've tried in Edinburgh."</p><div class="reviewer"><div class="r-avatar">AK</div><div><div class="r-name">Aisha K.</div><div class="r-src">Google Reviews</div></div></div></div>
+    </div>
+  </div>
+</section>
+
+<div class="flag-divider"><div></div><div></div><div></div></div>
+
+<!-- VISIT -->
+<section id="visit" class="visit-section">
+  <div class="section-inner visit-grid">
+    <div data-anim="fade-left">
+      <h2 class="info-title">Opening Hours</h2>
+      <ul class="hours-list">
+        <li><span class="day">Monday</span><span class="time">11:00 AM – 2:00 AM</span></li>
+        <li><span class="day">Tuesday</span><span class="time">11:00 AM – 2:00 AM</span></li>
+        <li><span class="day">Wednesday</span><span class="time">11:00 AM – 2:00 AM</span></li>
+        <li><span class="day">Thursday</span><span class="time">11:00 AM – 2:00 AM</span></li>
+        <li><span class="day">Friday</span><span class="time late">11:00 AM – 3:00 AM</span></li>
+        <li><span class="day">Saturday</span><span class="time late">11:00 AM – 3:00 AM</span></li>
+        <li class="no-border"><span class="day">Sunday</span><span class="time">10:30 AM – 2:00 AM</span></li>
+      </ul>
+    </div>
+    <div data-anim="fade-right">
+      <h2 class="info-title">Find Us</h2>
+      <ul class="contact-list">
+        <li><div class="contact-icon">📍</div><div><div class="contact-label">Address</div><div class="contact-val">21 Forrest Road, Old Town<br>Edinburgh, EH1 2QH</div></div></li>
+        <li><div class="contact-icon">📞</div><div><div class="contact-label">Phone</div><div class="contact-val"><a href="tel:+447515959941">+44 7515 959 941</a></div></div></li>
+        <li><div class="contact-icon">📱</div><div><div class="contact-label">Instagram</div><div class="contact-val"><a href="https://www.instagram.com/chetakeaway/" target="_blank">@chetakeaway</a></div></div></li>
+        <li><div class="contact-icon">🚇</div><div><div class="contact-label">Getting Here</div><div class="contact-val">Steps from the University of Edinburgh. Close to Edinburgh Waverley &amp; South Bridge buses.</div></div></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<div class="map-wrap">
+  <iframe src="https://maps.google.com/maps?q=21+Forrest+Road+Edinburgh+EH1+2QH&output=embed&z=16" loading="lazy" title="CHE Edinburgh location" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  <div class="map-pin">📍 21 Forrest Road · Edinburgh · EH1 2QH</div>
+</div>
+
+<footer>
+  <div class="footer-logo">
+    <svg viewBox="0 0 30 20" class="flag-sm" xmlns="http://www.w3.org/2000/svg"><rect width="30" height="20" fill="#fff"/><rect width="30" height="6.67" fill="#000"/><rect y="13.33" width="30" height="6.67" fill="#009639"/><polygon points="0,0 12,10 0,20" fill="#C8102E"/></svg>
+    <span>CHE</span>
+    <svg viewBox="0 0 30 20" class="flag-sm" xmlns="http://www.w3.org/2000/svg"><rect width="30" height="20" fill="#fff"/><rect width="30" height="6.67" fill="#000"/><rect y="13.33" width="30" height="6.67" fill="#009639"/><polygon points="0,0 12,10 0,20" fill="#C8102E"/></svg>
+  </div>
+  <p class="footer-tagline">Halal · Middle Eastern Street Food · Edinburgh Old Town</p>
+  <div class="footer-flag"><div></div><div></div><div></div></div>
+  <p class="footer-legal">© 2026 CHE Takeaway · 21 Forrest Road, Edinburgh EH1 2QH · +44 7515 959 941</p>
+</footer>
+
+<script src="menu-data.js"></script>
+<script src="main.js"></script>
+</body>
+</html>

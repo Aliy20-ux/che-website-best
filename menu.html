@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="CHE Edinburgh Full Menu — Halal shawarmas, pizzas, burgers, chips and more. 21 Forrest Road, Edinburgh.">
+<title>Menu — CHE Edinburgh</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="menu-page.css">
+</head>
+<body class="menu-page">
+
+<!-- NAV -->
+<nav id="nav" class="scrolled">
+  <a class="nav-logo" href="index.html">
+    <svg class="flag-sm" viewBox="0 0 28 19" xmlns="http://www.w3.org/2000/svg"><rect width="28" height="19" fill="#fff"/><rect width="28" height="6.33" fill="#000"/><rect y="12.67" width="28" height="6.33" fill="#009639"/><polygon points="0,0 11,9.5 0,19" fill="#C8102E"/></svg>
+    <span class="logo-text">CHE</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="index.html#about">Story</a></li>
+    <li><a href="index.html#reviews">Reviews</a></li>
+    <li><a href="index.html#visit">Visit</a></li>
+  </ul>
+  <div class="nav-actions">
+    <a href="https://www.ubereats.com/gb/store/che-takeaway/v60_GKCqQgy2SAcvM6nmnQ?diningMode=DELIVERY&sc=SEARCH_SUGGESTION" target="_blank" class="btn-order">Order Now</a>
+  </div>
+  <button class="ham" id="ham" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- MOBILE DRAWER -->
+<div class="mob-menu" id="mobMenu">
+  <button class="mob-close" id="mobClose">✕</button>
+  <nav class="mob-nav">
+    <a href="index.html" class="mob-link">Home</a>
+    <a href="index.html#about" class="mob-link">Our Story</a>
+    <a href="index.html#reviews" class="mob-link">Reviews</a>
+    <a href="index.html#visit" class="mob-link">Visit Us</a>
+  </nav>
+  <div class="mob-order">
+    <a href="https://www.ubereats.com/gb/store/che-takeaway/v60_GKCqQgy2SAcvM6nmnQ?diningMode=DELIVERY&sc=SEARCH_SUGGESTION" target="_blank" class="mob-btn ue">Uber Eats</a>
+    <a href="https://deliveroo.co.uk/menu/edinburgh/old-town-and-canongate/che-old-town?utm_medium=affiliate&utm_source=google_maps_link&fulfillment_type=DELIVERY" target="_blank" class="mob-btn dr">Deliveroo</a>
+  </div>
+</div>
+
+<!-- MENU HERO -->
+<div class="menu-hero">
+  <div class="menu-hero-bg"></div>
+  <div class="menu-hero-content">
+    <p class="menu-hero-eye">21 Forrest Road · Edinburgh · 100% Halal</p>
+    <h1 class="menu-hero-title">Our <em>Menu</em></h1>
+    <p class="menu-hero-sub">Every item made fresh daily. Confirmed from our Uber Eats &amp; Just Eat listings.</p>
+  </div>
+  <div class="flag-band"><div class="fb-blk"></div><div class="fb-wht"></div><div class="fb-grn"></div></div>
+</div>
+
+<!-- STICKY CATEGORY NAV -->
+<div class="cat-nav" id="catNav">
+  <div class="cat-nav-inner">
+    <button class="cat-btn active" data-cat="pizza">🍕 Pizza</button>
+    <button class="cat-btn" data-cat="wraps">🌯 Wraps</button>
+    <button class="cat-btn" data-cat="burgers">🍔 Burgers</button>
+    <button class="cat-btn" data-cat="chips">🍟 Chips</button>
+    <button class="cat-btn" data-cat="salad">🥗 Salad</button>
+    <button class="cat-btn" data-cat="sauces">🫙 Sauces</button>
+    <button class="cat-btn" data-cat="drinks">🥤 Drinks</button>
+  </div>
+</div>
+
+<!-- MENU CONTENT -->
+<main class="menu-main">
+
+  <!-- PIZZA -->
+  <section class="menu-cat" id="cat-pizza">
+    <div class="menu-cat-header">
+      <div class="cat-icon">🍕</div>
+      <div>
+        <h2 class="cat-title">Pizza</h2>
+        <p class="cat-sub">Stone-baked to order, every time</p>
+      </div>
+    </div>
+    <div class="menu-cards" id="cards-pizza"></div>
+  </section>
+
+  <!-- WRAPS -->
+  <section class="menu-cat" id="cat-wraps">
+    <div class="menu-cat-header">
+      <div class="cat-icon">🌯</div>
+      <div>
+        <h2 class="cat-title">Wraps &amp; Shawarma</h2>
+        <p class="cat-sub">Slow-roasted, freshly wrapped</p>
+      </div>
+    </div>
+    <div class="menu-cards" id="cards-wraps"></div>
+  </section>
+
+  <!-- BURGERS -->
+  <section class="menu-cat" id="cat-burgers">
+    <div class="menu-cat-header">
+      <div class="cat-icon">🍔</div>
+      <div>
+        <h2 class="cat-title">Burgers</h2>
+        <p class="cat-sub">100% Halal beef &amp; chicken</p>
+      </div>
+    </div>
+    <div class="menu-cards" id="cards-burgers"></div>
+  </section>
+
+  <!-- CHIPS -->
+  <section class="menu-cat" id="cat-chips">
+    <div class="menu-cat-header">
+      <div class="cat-icon">🍟</div>
+      <div>
+        <h2 class="cat-title">Chips &amp; Sides</h2>
+        <p class="cat-sub">Edinburgh's best chips — our regulars said it</p>
+      </div>
+    </div>
+    <div class="menu-cards" id="cards-chips"></div>
+  </section>
+
+  <!-- SALAD -->
+  <section class="menu-cat" id="cat-salad">
+    <div class="menu-cat-header">
+      <div class="cat-icon">🥗</div>
+      <div>
+        <h2 class="cat-title">Salads</h2>
+        <p class="cat-sub">Fresh, crisp &amp; made to order</p>
+      </div>
+    </div>
+    <div class="menu-cards" id="cards-salad"></div>
+  </section>
+
+  <!-- SAUCES -->
+  <section class="menu-cat" id="cat-sauces">
+    <div class="menu-cat-header">
+      <div class="cat-icon">🫙</div>
+      <div>
+        <h2 class="cat-title">Sauces &amp; Extras</h2>
+        <p class="cat-sub">The legendary garlic sauce awaits</p>
+      </div>
+    </div>
+    <div class="menu-cards" id="cards-sauces"></div>
+  </section>
+
+  <!-- DRINKS -->
+  <section class="menu-cat" id="cat-drinks">
+    <div class="menu-cat-header">
+      <div class="cat-icon">🥤</div>
+      <div>
+        <h2 class="cat-title">Drinks</h2>
+        <p class="cat-sub">Cold &amp; refreshing</p>
+      </div>
+    </div>
+    <div class="menu-cards" id="cards-drinks"></div>
+  </section>
+
+</main>
+
+<!-- ORDER STRIP -->
+<div class="order-strip">
+  <p class="order-strip-text">Ready to order? Choose your platform below</p>
+  <div class="order-strip-btns">
+    <a href="https://www.ubereats.com/gb/store/che-takeaway/v60_GKCqQgy2SAcvM6nmnQ?diningMode=DELIVERY&sc=SEARCH_SUGGESTION" target="_blank" class="strip-btn ue-btn">🛵 Uber Eats</a>
+    <a href="https://deliveroo.co.uk/menu/edinburgh/old-town-and-canongate/che-old-town?utm_medium=affiliate&utm_source=google_maps_link&fulfillment_type=DELIVERY" target="_blank" class="strip-btn dr-btn">🛵 Deliveroo</a>
+  </div>
+</div>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+  <div class="lb-backdrop" onclick="closeLightbox()"></div>
+  <button class="lb-close" onclick="closeLightbox()">✕</button>
+  <div class="lb-inner">
+    <img id="lb-img" src="" alt="">
+    <div class="lb-caption">
+      <div id="lb-name"></div>
+      <div id="lb-price"></div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-logo">
+    <svg viewBox="0 0 30 20" class="flag-sm" xmlns="http://www.w3.org/2000/svg"><rect width="30" height="20" fill="#fff"/><rect width="30" height="6.67" fill="#000"/><rect y="13.33" width="30" height="6.67" fill="#009639"/><polygon points="0,0 12,10 0,20" fill="#C8102E"/></svg>
+    <span>CHE</span>
+    <svg viewBox="0 0 30 20" class="flag-sm" xmlns="http://www.w3.org/2000/svg"><rect width="30" height="20" fill="#fff"/><rect width="30" height="6.67" fill="#000"/><rect y="13.33" width="30" height="6.67" fill="#009639"/><polygon points="0,0 12,10 0,20" fill="#C8102E"/></svg>
+  </div>
+  <p class="footer-tagline">Halal · Middle Eastern Street Food · Edinburgh Old Town</p>
+  <div class="footer-flag"><div></div><div></div><div></div></div>
+  <p class="footer-legal">© 2026 CHE Takeaway · 21 Forrest Road, Edinburgh EH1 2QH</p>
+</footer>
+
+<script src="menu-data.js"></script>
+<script src="menu-page.js"></script>
+</body>
+</html>

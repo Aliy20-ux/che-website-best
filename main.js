@@ -138,9 +138,99 @@
     if (e.key === 'ArrowLeft')  shiftGallery(-1);
   });
 
+  /* ── Scroll progress bar ── */
+  const progressBar = document.createElement('div');
+  progressBar.className = 'scroll-progress';
+  document.body.prepend(progressBar);
+  window.addEventListener('scroll', () => {
+    const pct = window.scrollY / (document.body.scrollHeight - window.innerHeight) * 100;
+    progressBar.style.width = Math.min(pct, 100) + '%';
+  }, { passive: true });
+
+  /* ── Cursor spotlight (desktop only) ── */
+  if (window.matchMedia('(hover: hover)').matches) {
+    const glow = document.createElement('div');
+    glow.className = 'cursor-glow';
+    document.body.appendChild(glow);
+    document.addEventListener('mousemove', e => {
+      glow.style.left = e.clientX + 'px';
+      glow.style.top  = e.clientY + 'px';
+    });
+  }
+
+  /* ── Letter split hero title ── */
+  function splitHeroTitle() {
+    const title = document.querySelector('.hero-title');
+    if (!title) return;
+    // Split CHE text node and em separately
+    title.childNodes.forEach(node => {
+      if (node.nodeType === 3) { // text node "CHE"
+        const chars = node.textContent.trim().split('');
+        const frag = document.createDocumentFragment();
+        chars.forEach((ch, i) => {
+          const span = document.createElement('span');
+          span.className = 'char';
+          span.textContent = ch === ' ' ? ' ' : ch;
+          span.style.animationDelay = (i * 80 + 200) + 'ms';
+          frag.appendChild(span);
+        });
+        node.replaceWith(frag);
+      }
+    });
+  }
+
+  /* ── Word split for section titles ── */
+  function splitSectionTitles() {
+    $$('.section-title').forEach(el => {
+      // Don't re-process
+      if (el.querySelector('.split-word')) return;
+      el.innerHTML = el.innerHTML.replace(/(<em>.*?<\/em>|[^\s<]+)/g, (match) => {
+        return `<span class="split-word"><span class="word-inner">${match}</span></span>`;
+      });
+    });
+  }
+
+  /* ── Counting numbers ── */
+  function animateCount(el) {
+    // Grab the text node (not the <sup>)
+    const textNode = Array.from(el.childNodes).find(n => n.nodeType === 3);
+    if (!textNode) return;
+    const raw = textNode.textContent.trim();
+    const num = parseFloat(raw);
+    if (isNaN(num)) return;
+    const isDecimal = raw.includes('.');
+    const duration = 1400;
+    const start = performance.now();
+    el.classList.add('counting');
+    function step(now) {
+      const p = Math.min((now - start) / duration, 1);
+      const ease = 1 - Math.pow(1 - p, 3);
+      const val = isDecimal ? (num * ease).toFixed(1) : Math.round(num * ease);
+      textNode.textContent = val;
+      if (p < 1) requestAnimationFrame(step);
+      else { textNode.textContent = isDecimal ? num.toFixed(1) : String(num); el.classList.remove('counting'); }
+    }
+    requestAnimationFrame(step);
+  }
+
+  function observeStats() {
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (!e.isIntersecting) return;
+        const numEl = e.target.querySelector('.stat-num');
+        if (numEl) animateCount(numEl);
+        io.unobserve(e.target);
+      });
+    }, { threshold: 0.5 });
+    $$('.stat').forEach(el => io.observe(el));
+  }
+
   /* ── Init ── */
   document.addEventListener('DOMContentLoaded', () => {
+    splitHeroTitle();
+    splitSectionTitles();
     observeReveal();
+    observeStats();
     if (window.scrollY > 50) nav.classList.add('scrolled');
   });
 
